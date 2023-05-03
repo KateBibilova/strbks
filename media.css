@@ -1,0 +1,121 @@
+@media (max-width: 991px) {
+    .header {
+        padding: 20px;
+    }  
+
+    .toggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(img/icons/menu.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+        z-index: 11;
+    }
+    
+    .toggle.active {
+        position: fixed;
+        right: 20px;
+        background: url(img/icons/close.png);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .navbar.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        z-index: 10;
+    }
+
+    .main-page {
+        padding: 20px 20px 120px;
+    }
+    
+    .logo {
+        max-width: 60px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .content {
+       flex-direction: column; 
+       margin-top: 100px;
+    }
+
+    .text-box__header {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+
+    .textBox {
+        max-width: 100%;
+    }
+
+    .content__img {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .content__imgItem {
+        max-width: 300px;
+    }
+
+    .circle {
+        clip-path: circle(380px at center bottom)
+    }
+
+    .options_img {
+        max-width: 40px;
+    }
+
+    .socialMediaIcons {
+        background: #017143;
+        right: 0;
+        width: 50px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .navbar__item a {
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+
+    .navbar__item_active a {
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1114px) {
+    .text-box__header {
+        font-size: 3em;
+    }
+
+    .text-box {
+        position: relative;
+        max-width: 420px;
+    }
+
+}
+
+@media (min-width: 1115px) and (max-width: 1160px) {
+    .text-box {
+        position: relative;
+        max-width: 500px;
+    }
+}

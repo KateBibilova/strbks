@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Website Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+   
+</head>
+<body>
+    <section class="main-page">
+        <div class="circle"></div>
+        <header class="header">
+            <a href="#"><img src="./img/logo.png" class="logo" alt="Logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navbar">
+                <li class="navbar__item_active"><a href="#">Home</a></li>
+                <li class="navbar__item"><a href="#">Menu</a></li>
+                <li class="navbar__item"><a href="#">What's New</a></li>
+                <li class="navbar__item"><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="text-box">
+                <h2 class="text-box__header">It's not just Coffee<br>It's <span class="text-box__span">Starbucks</span></h2>
+                <p class="text-box__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                <a class="text-box__link" href="#">Learn More</a>
+            </div>
+            <div class="content__img">
+                <img src="img/img1.png" class="content__imgItem" alt="green frappuccino">
+            </div>
+        </div>
+
+        <ul class="options">
+                <li class="options__item"><img src="img/option_1.png"  class="options_img" onclick="imgSlider('img/img1.png');changeCircleColor('#017143')" alt="green frappuccino"></li>
+                <li class="options__item"><img src="img/option_2.png"  class="options_img" onclick="imgSlider('img/img2.png');changeCircleColor('#eb7495')" alt="pink frappuccino"></li>
+                <li class="options__item"><img src="img/option_3.png"  class="options_img" onclick="imgSlider('img/img3.png');changeCircleColor('#a26339')" alt="purple frappuccino"></li>
+         </ul>
+        <ul class="socialMediaIcons">
+                <li class="socialMediaIcons__item"><a href="#"><img src="img/icons/facebook.png" alt="facebook"></a></li>
+                <li class="socialMediaIcons__item"><a href="#"><img src="img/icons/twitter.png" alt="twitter"></a></li>
+                <li class="socialMediaIcons__item"><a href="#"><img src="img/icons/instagram.png" alt="instagram"></a></li>
+         </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+          document.querySelector('.content__imgItem').src = anything;
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var navbar = document.querySelector('.navbar');
+            menuToggle.classList.toggle('active');
+            navbar.classList.toggle('active');
+
+        }
+    </script>
+</body>  
